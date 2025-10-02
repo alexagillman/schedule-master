@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query'
 import { format, addDays, subDays, parseISO, isSameDay } from 'date-fns'
-import { Plus, ChevronLeft, ChevronRight, Clock, Calendar, Pencil, Trash2 } from '@phosphor-icons/react'
+import { Plus, CaretLeft, CaretRight, Clock, Calendar, Pencil, Trash } from '@phosphor-icons/react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
@@ -152,7 +152,7 @@ function App() {
               size="sm"
               onClick={() => setSelectedDate(subDays(selectedDate, 1))}
             >
-              <ChevronLeft className="w-4 h-4" />
+              <CaretLeft className="w-4 h-4" />
             </Button>
             
             <div className="flex items-center gap-2">
@@ -168,7 +168,7 @@ function App() {
               size="sm"
               onClick={() => setSelectedDate(addDays(selectedDate, 1))}
             >
-              <ChevronRight className="w-4 h-4" />
+              <CaretRight className="w-4 h-4" />
             </Button>
           </div>
 
@@ -278,7 +278,7 @@ function App() {
                           setEditingEvent(null)
                         }}
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash className="w-4 h-4" />
                       </Button>
                     )}
                   </div>
